@@ -11,10 +11,12 @@ app.use(cors({
     methods:['GET','POST','PUT','PATCH','DELETE']
 }))
 app.use('/',require('./Routes'))
+const PORT = process.env.PORT || 5000; // Use environment variable PORT if available, otherwise default to 5000
 
-app.listen(5000,()=>{
-    console.log("server connected")
-})
+app.listen(PORT, () => {
+    console.log("Server connected");
+});
+
 
 
 
